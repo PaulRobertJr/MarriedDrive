@@ -1,6 +1,6 @@
-import './Monogram.css'
+import "./Monogram.css";
 
-function Monogram({ size = '8rem' }) {
+function Monogram({ size = "8rem" }) {
   return (
     <svg
       className="monogram"
@@ -23,10 +23,10 @@ function Monogram({ size = '8rem' }) {
         textAnchor="middle"
         letterSpacing="3"
       >
-        L &amp; G
+        G &amp; L
       </text>
     </svg>
-  )
+  );
 }
 
-export default Monogram
+export default Monogram;
