@@ -1,0 +1,21 @@
+.monogram {
+  height: auto;
+  display: block;
+}
+
+.monogram__ring {
+  fill: none;
+  stroke: var(--color-gold);
+  stroke-width: 1;
+}
+
+.monogram__ring--inner {
+  stroke-width: 0.5;
+  opacity: 0.6;
+}
+
+.monogram__text {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  fill: var(--color-gold);
+}

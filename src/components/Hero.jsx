@@ -1,38 +1,15 @@
+import Monogram from './Monogram.jsx'
 import './Hero.css'
 
 function Hero() {
   return (
     <section className="hero">
-      {/* Overlay escuro sutil (placeholder). Quando a foto do casal estiver
-          disponível, troque background-color por background-image no CSS:
-          background-image: url('/assets/casal.jpg'); */}
+      {/* Overlay sobre a foto do casal. A imagem fica definida em Hero.css
+          (background-image) e pode ser trocada por outra foto. */}
       <div className="hero__overlay" aria-hidden="true" />
 
       <div className="hero__content">
-        <svg
-          className="hero__monogram"
-          viewBox="0 0 120 120"
-          role="img"
-          aria-label="Monograma Lauren e Geibson"
-        >
-          <circle className="hero__monogram-ring" cx="60" cy="60" r="56" />
-          <circle
-            className="hero__monogram-ring hero__monogram-ring--inner"
-            cx="60"
-            cy="60"
-            r="51"
-          />
-          <text
-            className="hero__monogram-text"
-            x="60"
-            y="72"
-            textAnchor="middle"
-            letterSpacing="3"
-          >
-            L &amp; G
-          </text>
-        </svg>
-
+        <Monogram size="clamp(5rem, 16vw, 8rem)" />
         <h1 className="hero__title">Lauren &amp; Geibson</h1>
         <p className="hero__date">01 de novembro de 2026</p>
       </div>

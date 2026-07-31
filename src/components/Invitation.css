@@ -1,0 +1,29 @@
+.invitation {
+  padding: clamp(4rem, 12vh, 7rem) 1.5rem;
+  background-color: var(--color-ivory);
+  text-align: center;
+}
+
+.invitation__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: clamp(2rem, 5vh, 3rem);
+}
+
+.invitation__divider-line {
+  height: 1px;
+  width: min(6rem, 20vw);
+  background-color: var(--color-gold);
+  opacity: 0.6;
+}
+
+.invitation__text {
+  max-width: 60ch;
+  margin-inline: auto;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
