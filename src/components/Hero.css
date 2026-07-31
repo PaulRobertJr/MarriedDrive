@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(2rem, 6vh, 4rem) 1.5rem 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--color-ivory);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--color-ink);
+  opacity: 0.15;
+  background-image: url("src/assets/casal.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero__monogram {
+  width: clamp(5rem, 16vw, 8rem);
+  height: auto;
+}
+
+.hero__monogram-ring {
+  fill: none;
+  stroke: var(--color-gold);
+  stroke-width: 1;
+}
+
+.hero__monogram-ring--inner {
+  stroke-width: 0.5;
+  opacity: 0.6;
+}
+
+.hero__monogram-text {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  fill: var(--color-gold);
+}
+
+.hero__title {
+  margin-top: clamp(1.5rem, 4vh, 2.5rem);
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  color: var(--color-ink);
+}
+
+.hero__date {
+  margin-top: 0.75rem;
+  font-size: clamp(0.875rem, 3vw, 1.125rem);
+  letter-spacing: 0.35em;
+  color: var(--color-wine);
+}
+
+.hero__scroll {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-gold);
+  animation: hero-bounce 2s ease-in-out infinite;
+}
+
+.hero__scroll-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.hero__scroll-arrow {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@keyframes hero-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll {
+    animation: none;
+  }
+}
