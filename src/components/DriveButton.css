@@ -10,26 +10,26 @@
   margin-bottom: 1.5rem;
   font-family: var(--font-body);
   font-style: italic;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
   color: var(--color-wine);
 }
 
 .drive__button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  max-width: 100%;
   gap: 0.6rem;
-  padding: 1.1rem 2.25rem;
+  padding: 1.1rem clamp(1.25rem, 5vw, 2.25rem);
   background-color: var(--color-wine);
   color: var(--color-ivory);
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2.8vw, 0.9rem);
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   border-radius: 4px;
-  transition:
-    background-color 0.25s ease,
-    transform 0.25s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .drive__button-icon {
@@ -38,7 +38,7 @@
 
 .drive__button:hover {
   background-color: var(--color-gold);
-  transform: scale(1.03);
+  color: var(--color-ink);
 }
 
 .drive__button:focus-visible {
@@ -46,8 +46,28 @@
   outline-offset: 3px;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: no-preference) {
+  .drive {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .drive--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .drive__button {
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+
   .drive__button:hover {
-    transform: none;
+    transform: scale(1.03);
   }
 }

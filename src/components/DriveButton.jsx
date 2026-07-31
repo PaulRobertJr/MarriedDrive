@@ -1,10 +1,14 @@
+import useInView from "../hooks/useInView.js";
 import "./DriveButton.css";
 
-const DRIVE_LINK = "https://drive.google.com/";
+const DRIVE_LINK =
+  "https://drive.google.com/drive/folders/1T8H4zoBhc9jxAiV98T4nfD4MRvDp-Uf2";
 
 function DriveButton() {
+  const [ref, inView] = useInView();
+
   return (
-    <section className="drive">
+    <section ref={ref} className={`drive${inView ? " drive--visible" : ""}`}>
       <p className="drive__hint">
         Clique no botão abaixo para acessar nosso álbum compartilhado
       </p>

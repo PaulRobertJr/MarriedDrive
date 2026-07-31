@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(2rem, 6vh, 4rem) 1.5rem 1.5rem;
+  padding: clamp(2rem, 6vh, 4rem) clamp(1rem, 5vw, 1.5rem) 1.5rem;
   text-align: center;
   overflow: hidden;
   background-color: var(--color-ivory);
@@ -38,7 +38,7 @@
 .hero__date {
   margin-top: 0.75rem;
   font-size: clamp(0.875rem, 3vw, 1.125rem);
-  letter-spacing: 0.35em;
+  letter-spacing: 0.22em;
   color: var(--color-wine);
 }
 
@@ -50,8 +50,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
-  color: var(--color-gold);
-  animation: hero-bounce 2s ease-in-out infinite;
+  color: var(--color-wine);
 }
 
 .hero__scroll-label {
@@ -76,8 +75,30 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__date {
+    letter-spacing: 0.35em;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__content {
+    animation: hero-fade-in 0.9s ease both;
+  }
+
   .hero__scroll {
-    animation: none;
+    animation: hero-bounce 2s ease-in-out infinite;
   }
 }

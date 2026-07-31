@@ -1,9 +1,15 @@
 import Monogram from './Monogram.jsx'
+import useInView from '../hooks/useInView.js'
 import './Invitation.css'
 
 function Invitation() {
+  const [ref, inView] = useInView()
+
   return (
-    <section className="invitation">
+    <section
+      ref={ref}
+      className={`invitation${inView ? ' invitation--visible' : ''}`}
+    >
       <div className="invitation__divider" aria-hidden="true">
         <span className="invitation__divider-line" />
         <Monogram size="2.5rem" />
