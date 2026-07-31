@@ -23,6 +23,14 @@
   opacity: 0.6;
 }
 
+.invitation__lead {
+  margin-bottom: clamp(1.5rem, 4vh, 2.5rem);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
+  font-weight: 600;
+  color: var(--color-wine);
+}
+
 .invitation__text {
   max-width: 60ch;
   margin-inline: auto;
@@ -30,6 +38,28 @@
   font-size: clamp(1.05rem, 2.5vw, 1.15rem);
   line-height: 1.7;
   color: var(--color-ink);
+}
+
+.invitation__text + .invitation__text {
+  margin-top: clamp(1.25rem, 3vh, 2rem);
+}
+
+.invitation__signature {
+  margin-top: clamp(2.5rem, 6vh, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-style: italic;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: var(--color-wine);
+}
+
+.invitation__signature-name {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  font-weight: 600;
 }
 
 @media (prefers-reduced-motion: no-preference) {

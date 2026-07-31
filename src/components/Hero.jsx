@@ -10,7 +10,7 @@ function Hero() {
 
       <div className="hero__content">
         <Monogram size="clamp(5rem, 16vw, 8rem)" />
-        <h1 className="hero__title">Lauren &amp; Geibson</h1>
+        <h1 className="hero__title">Geibson &amp; Lauren</h1>
         <p className="hero__date">01 de novembro de 2026</p>
       </div>
 

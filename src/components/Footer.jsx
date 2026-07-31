@@ -1,11 +1,11 @@
-import './Footer.css'
+import "./Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <p className="footer__text">Com carinho, Lauren &amp; Geibson</p>
+      <p className="footer__text"></p>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

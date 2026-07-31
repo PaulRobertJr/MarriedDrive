@@ -7,7 +7,7 @@ function Monogram({ size = '8rem' }) {
       style={{ width: size }}
       viewBox="0 0 120 120"
       role="img"
-      aria-label="Monograma Lauren e Geibson"
+      aria-label="Monograma Geibson e Lauren"
     >
       <circle className="monogram__ring" cx="60" cy="60" r="56" />
       <circle

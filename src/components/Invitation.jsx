@@ -16,10 +16,11 @@ function Invitation() {
         <span className="invitation__divider-line" />
       </div>
 
+      <p className="invitation__lead">Chegou o grande dia! ✨</p>
+
       <p className="invitation__text">
-        Chegou o grande dia! 01 de novembro de 2026 vai ficar marcado —
-        literalmente, olha a data aí em cima — como o dia em que a gente
-        disse sim de vez.
+        O dia 01 de novembro de 2026 vai ficar para sempre na nossa memória.
+        E queremos reviver cada momento pelos seus olhos!
       </p>
 
       <div
@@ -32,9 +33,20 @@ function Invitation() {
       </div>
 
       <p className="invitation__text">
-        E como toda festa boa merece um álbum à altura, queremos as fotos
-        que você tirar: as bonitas, as trapalhadas e aquele vídeo bizarro da
-        pista de dança. Sobe tudo aqui, bora?
+        Fotografou? Filmou? Pegou aquele flagrante engraçado ou registrou um
+        momento especial? Envie tudo por aqui! Vale as fotos lindas, os
+        bastidores, as trapalhadas e até aquele vídeo caótico da pista de
+        dança.
+      </p>
+
+      <p className="invitation__text">
+        Mal podemos esperar para ver o casamento pela perspectiva de cada um
+        de vocês. 🤎
+      </p>
+
+      <p className="invitation__signature">
+        <span>Com carinho,</span>
+        <span className="invitation__signature-name">Geibson &amp; Lauren</span>
       </p>
     </section>
   )
